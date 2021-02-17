@@ -1,0 +1,93 @@
+/*FARBEN*/
+
+:root {
+    --powder-blue: #AED9E0;
+    --black-coral: #5E6472;
+    --melon: #FFA69E;
+    --eggshell: #FAF3DD;
+}
+
+
+/*UTILS*/
+
+.text-center {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+/*BUTTONS*/
+
+.btn-card {
+    color: var(--melon);
+    background-color: var(--black-coral);
+    border-color: var(--black-coral);
+    margin-right: 5%;
+}
+
+
+/*NAVBAR*/
+
+.navbar-brand {
+    color: var(--powder-blue);
+}
+
+.custom-navcolor {
+    background-color: var(--black-coral);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: var(--powder-blue);
+}
+
+.navbar-dark:hover .navbar-nav:hover .nav-link:hover .navbar-brand:hover {
+    color: var(--melon);
+}
+
+
+/*CAROUSEL*/
+
+#carouselExampleCaptions h5 {
+    text-transform: uppercase;
+    text-decoration-thickness: 20;
+}
+
+
+/*CARDS*/
+
+.card {
+    border-color: var(--black-coral);
+}
+
+.custom-card-image {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 0.25rem;
+}
+
+.custom-card {
+    max-width: 640px;
+}
+
+.card-center {
+    margin: 0 auto;
+    /* Added */
+    float: none;
+    /* Added */
+    margin-bottom: 10px;
+    /* Added */
+}
+
+.grid-card-body {
+    background-color: var(--black-coral);
+}
+
+.grid-card-title {
+    color: var(--powder-blue);
+}
+
+.grid-card-text {
+    color: white;
+}
