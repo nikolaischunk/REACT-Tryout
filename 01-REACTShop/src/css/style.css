@@ -1,0 +1,46 @@
+:root {
+    --powder-blue: #aed9e0;
+    --black-coral: #5e6472;
+    --melon: #ffa69e;
+    --eggshell: #faf3dd;
+}
+
+.navbar-brand {
+    color: var(--powder-blue) !important;
+}
+
+.custom-navcolor {
+    background-color: var(--black-coral);
+}
+
+.color-blue {
+    color: var(--powder-blue) !important;
+}
+
+.hover-melon:hover {
+    color: var(--melon) !important;
+}
+
+.bg-grey {
+    background-color: var(--black-coral);
+}
+
+.txt-color-white {
+    color: white;
+}
+
+.caption-bg {
+    background-color: #5e6472af;
+}
+
+.custom-card-border {
+    border-color: var(--black-coral) !important;
+}
+
+input {
+    margin-top: 20px;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    padding-left: 10px;
+}

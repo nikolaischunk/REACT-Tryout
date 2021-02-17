@@ -1,0 +1,24 @@
+[
+
+    {
+        "id": "1",
+        "imglink": "1.jpg",
+        "title": "etwas",
+        "description": "Blblabjsffjakspfpsfpüpfio",
+        "price": "2.20"
+    },
+    {
+        "id": "2",
+        "imglink": "2.jpg",
+        "title": "etwasAnderes",
+        "description": "Blblabjsffjakspfpsfpüpfio",
+        "price": "4.40"
+    },
+    {
+        "id": 3,
+        "imglink": "3.jpg",
+        "title": "etwasNeues",
+        "description": "Blblabjsffjakspfpsfpüpfio",
+        "price": "7.90"
+    }
+]
