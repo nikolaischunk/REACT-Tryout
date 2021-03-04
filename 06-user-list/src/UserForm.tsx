@@ -14,7 +14,6 @@ export default function UserForm() {
     plz: yup.number(),
     city: yup.string(),
   });
-
   function handleSubmit(event: any) {
     const data = new FormData(event.target);
 
@@ -23,79 +22,59 @@ export default function UserForm() {
     const adress = data.get("adress");
     const plz = data.get("plz");
     const city = data.get("city");
-    //const value = Object.fromEntries(data.entries());
-
-    (async () => {
-      const rawResponse = await fetch("http://localhost:3004/users", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstname: { firstname },
-          lastname: { lastname },
-          adress: { adress },
-          plz: { plz },
-          city: { city },
-        }),
-        //body: JSON.stringify(value, any);
-      });
-    })();
   }
-
   return (
-    <Formik
-      initialValues={{ firstname: "", lastname: "", adress: "", city: "" }}
-      validationSchema={schema}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
+      <Formik
+        initialValues={{ firstname: "", lastname: "", adress: "", city: "" }}
+        validationSchema={schema}
+        onSubmit={(values, { setSubmitting }) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
 
-          setSubmitting(false);
-        }, 400);
-      }}
-    >
-      {(props: FormikProps<IUser>) => {
-        <Form>
-          <ListGroup.Item
-            as="input"
-            name="firstname"
-            placeholder="Firstname"
-          ></ListGroup.Item>
-          <ErrorMessage component="div" name="firstname" />
-          <ListGroup.Item
-            as="input"
-            name="lastname"
-            placeholder="Lastname"
-          ></ListGroup.Item>
-          <ErrorMessage component="div" name="lastname" />
-          <ListGroup.Item
-            as="input"
-            name="adress"
-            placeholder="Adress"
-          ></ListGroup.Item>
-          <ErrorMessage component="div" name="adress" />
-          <ListGroup.Item
-            as="input"
-            name="plz"
-            placeholder="PLZ"
-          ></ListGroup.Item>
-          <ErrorMessage component="div" name="plz" />
-          <ListGroup.Item
-            as="input"
-            name="city"
-            placeholder="City"
-          ></ListGroup.Item>
-          <ErrorMessage component="div" name="city" />
-          <Button
-            as="input"
-            type="submit"
-            value="Submit"
-            onClick={handleSubmit}
-          />{" "}
-        </Form>;
-      }}
-    </Formik>
+            setSubmitting(false);
+          }, 400);
+        }}
+      >
+        {(props: FormikProps<IUser>) => (
+          <Form>
+            <ListGroup.Item
+              as="input"
+              name="firstname"
+              placeholder="Firstname"
+            ></ListGroup.Item>
+            <ErrorMessage component="div" name="firstname" />
+            <ListGroup.Item
+              as="input"
+              name="lastname"
+              placeholder="Lastname"
+            ></ListGroup.Item>
+            <ErrorMessage component="div" name="lastname" />
+            <ListGroup.Item
+              as="input"
+              name="adress"
+              placeholder="Adress"
+            ></ListGroup.Item>
+            <ErrorMessage component="div" name="adress" />
+            <ListGroup.Item
+              as="input"
+              name="plz"
+              placeholder="PLZ"
+            ></ListGroup.Item>
+            <ErrorMessage component="div" name="plz" />
+            <ListGroup.Item
+              as="input"
+              name="city"
+              placeholder="City"
+            ></ListGroup.Item>
+            <ErrorMessage component="div" name="city" />
+            <Button
+              as="input"
+              type="submit"
+              value="Submit"
+              onClick={handleSubmit}
+            />
+          </Form>
+        )}
+      </Formik>
   );
 }
