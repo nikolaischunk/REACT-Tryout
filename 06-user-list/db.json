@@ -2,6 +2,7 @@
     "users": [{
         "id": 1,
         "name": "hans",
-        "age": 25
+        "age": 25,
+        "email": "hans.john@gmail.com"
     }]
 }
