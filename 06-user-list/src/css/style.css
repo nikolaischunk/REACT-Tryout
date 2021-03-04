@@ -2,3 +2,11 @@
     margin-top: 3em;
     text-align: center;
 }
+
+.list-group-item.disabled {
+    color: black !important;
+}
+
+.submitbtn {
+    padding-top: 10em;
+}

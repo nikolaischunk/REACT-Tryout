@@ -1,8 +1,19 @@
 {
     "users": [{
-        "id": 1,
-        "name": "hans",
-        "age": 25,
-        "email": "hans.john@gmail.com"
-    }]
+            "id": 1,
+            "firstname": "Hans",
+            "lastname": "Bäcker",
+            "adress": "Eine Strasse 9",
+            "plz": 8008,
+            "city": "Zürich"
+        },
+        {
+            "id": 2,
+            "firstname": "Fritz",
+            "lastname": "Meier",
+            "adress": "Eine andere Strasse 15",
+            "plz": 8909,
+            "city": "Fluxhausen"
+        }
+    ]
 }

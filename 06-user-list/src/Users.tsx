@@ -4,13 +4,14 @@ import { useState } from "react";
 import { Container, ListGroup } from "react-bootstrap";
 import "./css/style.css";
 import ListUser from "./ListUser";
-import User from "./User";
+import IUser from "./IUser";
+import UserForm from "./UserForm";
 
 function Users() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3004/users/1")
+    fetch("http://localhost:3004/users")
       .then(function (response) {
         return response.json();
       })
@@ -20,22 +21,26 @@ function Users() {
   }, []);
 
   return (
-    <Container>
-      <ListGroup horizontal>
-        <ListGroup.Item>ID</ListGroup.Item>
-        <ListGroup.Item>Name</ListGroup.Item>
-        <ListGroup.Item>Age</ListGroup.Item>
-        <ListGroup.Item>EMail</ListGroup.Item>
-      </ListGroup>
+    <Container className="users">
+      <UserForm></UserForm>
+        <br></br>
+      <ListUser
+        firstname="Firstname"
+        lastname="Lastname"
+        adress="Adress"
+        plz="PLZ"
+        city="City"
+      ></ListUser>
 
       {data &&
-        data.map(function (element: User) {
+        data.map(function (element: IUser) {
           return (
             <ListUser
-              id={element.id}
-              name={element.name}
-              age={element.age}
-              email={element.email}
+              firstname={element.firstname}
+              lastname={element.lastname}
+              adress={element.adress}
+              plz={element.plz}
+              city={element.city}
             ></ListUser>
           );
         })}

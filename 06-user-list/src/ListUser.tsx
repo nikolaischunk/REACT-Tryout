@@ -8,13 +8,24 @@ function ListUser(props: any) {
     console.log("");
   });
 
+  // return (
+  //     <ListGroup horizontal>
+  //       <ListGroup.Item>{props.firstname}</ListGroup.Item>
+  //       <ListGroup.Item>{props.lastname}</ListGroup.Item>
+  //       <ListGroup.Item>{props.adress}</ListGroup.Item>
+  //       <ListGroup.Item>{props.plz}</ListGroup.Item>
+  //       <ListGroup.Item>{props.city}</ListGroup.Item>
+  //     </ListGroup>
+  // );
+
   return (
-      <ListGroup horizontal>
-        <ListGroup.Item>{props.id}</ListGroup.Item>
-        <ListGroup.Item>{props.name}</ListGroup.Item>
-        <ListGroup.Item>{props.age}</ListGroup.Item>
-        <ListGroup.Item>{props.email}</ListGroup.Item>
-      </ListGroup>
+    <ListGroup horizontal>
+      <ListGroup.Item as="input" value={props.firstname} disabled></ListGroup.Item>
+      <ListGroup.Item as="input" value={props.lastname} disabled></ListGroup.Item>
+      <ListGroup.Item as="input" value={props.adress} disabled></ListGroup.Item>
+      <ListGroup.Item as="input" value={props.plz} disabled></ListGroup.Item>
+      <ListGroup.Item as="input" value={props.city} disabled></ListGroup.Item>
+    </ListGroup>
   );
 }
 
